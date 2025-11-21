@@ -15,7 +15,7 @@
             <li><a href="{{ url('/') }}" class="font-semibold hover:text-blue-500">Home</a></li>
             <li><a href="#sobre" class="font-semibold hover:text-blue-500">Sobre</a></li>
             <li><a href="#catalogo" class="font-semibold hover:text-blue-500">Catálogo</a></li>
-            <li><a href="{{ url('/contact') }}" class="font-semibold hover:text-blue-500">Contato</a></li>
+            <li><a href="{{ url('/contato') }}" class="font-semibold hover:text-blue-500">Contato</a></li>
 
             @auth
                 <li>
@@ -38,14 +38,6 @@
                     </li>
                 @endif
             @endauth
-
-            <li>
-                {{-- A lógica do Alpine.js para o tema continuará funcionando, pois app.js é carregado no layout principal --}}
-                <button id="themeBtn" onclick="toggleTheme()"
-                    class="btn bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 w-10 h-10 rounded-lg font-semibold flex items-center justify-center">
-                    🌙
-                </button>
-            </li>
         </ul>
     </nav>
 </header>

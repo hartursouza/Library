@@ -1,7 +1,5 @@
 <x-home-layout>
 
-    {{-- Todo o conteúdo que estava dentro da tag <main> agora fica aqui --}}
-
     <section class="hero relative py-16 text-white overflow-hidden rounded-xl">
         <div class="absolute inset-0">
             <img src="{{ asset('images/hero-background.jpg') }}" alt="Biblioteca com prateleiras de livros"
@@ -50,63 +48,66 @@
     </section>
 
     <section class="features grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-7" aria-label="Funcionalidades">
-        <div class="feature bg-white dark:bg-slate-800 p-4 rounded-xl shadow-md shadow-slate-900/5 text-center">
+        <div class="feature bg-white p-4 rounded-xl shadow-md shadow-slate-900/5 text-center">
             <div class="text-2xl">📚</div>
             <h4 class="font-semibold mt-2.5 mb-1.5">Catálogo digital</h4>
-            <p class="text-sm text-slate-500 dark:text-slate-400">Pesquise e consulte a disponibilidade do
-                acervo.</p>
+            <p class="text-sm text-slate-600">Pesquise e consulte a disponibilidade do acervo.</p>
         </div>
-        <div class="feature bg-white dark:bg-slate-800 p-4 rounded-xl shadow-md shadow-slate-900/5 text-center">
+
+        <div class="feature bg-white p-4 rounded-xl shadow-md shadow-slate-900/5 text-center">
             <div class="text-2xl">🔁</div>
             <h4 class="font-semibold mt-2.5 mb-1.5">Empréstimos e devoluções</h4>
-            <p class="text-sm text-slate-500 dark:text-slate-400">Registro rápido para empréstimos e controle de
-                prazos.</p>
+            <p class="text-sm text-slate-600">Registro rápido para empréstimos e controle de prazos.</p>
         </div>
-        <div class="feature bg-white dark:bg-slate-800 p-4 rounded-xl shadow-md shadow-slate-900/5 text-center">
+
+        <div class="feature bg-white p-4 rounded-xl shadow-md shadow-slate-900/5 text-center">
             <div class="text-2xl">👥</div>
             <h4 class="font-semibold mt-2.5 mb-1.5">Cadastro de membros</h4>
-            <p class="text-sm text-slate-500 dark:text-slate-400">Perfis para membros da igreja com histórico de
-                empréstimos.</p>
+            <p class="text-sm text-slate-600">Perfis para membros da igreja com histórico de empréstimos.</p>
         </div>
-        <div class="feature bg-white dark:bg-slate-800 p-4 rounded-xl shadow-md shadow-slate-900/5 text-center">
+
+        <div class="feature bg-white p-4 rounded-xl shadow-md shadow-slate-900/5 text-center">
             <div class="text-2xl">📈</div>
             <h4 class="font-semibold mt-2.5 mb-1.5">Relatórios</h4>
-            <p class="text-sm text-slate-500 dark:text-slate-400">Estatísticas simples para acompanhar o uso da
-                biblioteca.</p>
+            <p class="text-sm text-slate-600">Estatísticas simples para acompanhar o uso da biblioteca.</p>
         </div>
     </section>
 
     <section id="catalogo" class="my-7">
         <h3 class="text-2xl font-bold">Destaques do acervo</h3>
-        <p class="text-slate-600 dark:text-slate-400 mt-1">Alguns títulos selecionados para edificação e estudo.
-        </p>
+        <p class="text-slate-600 mt-1">Alguns títulos selecionados para edificação e estudo.</p>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-            <div class="bg-white dark:bg-slate-800 p-3 rounded-xl flex gap-3 items-start">
+            <div class="bg-white p-3 rounded-xl flex gap-3 items-start">
                 <div
-                    class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 dark:from-slate-700 dark:to-slate-800 flex-shrink-0 flex items-center justify-center font-bold text-slate-500">
-                    Bí</div>
+                    class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 flex-shrink-0 flex items-center justify-center font-bold text-slate-500">
+                    Bí
+                </div>
                 <div>
                     <h5 class="font-bold text-base mb-1">Bíblia de Estudo</h5>
-                    <p class="text-sm text-slate-500 dark:text-slate-400">Tradução atualizada — Disponível</p>
+                    <p class="text-sm text-slate-600">Tradução atualizada — Disponível</p>
                 </div>
             </div>
-            <div class="bg-white dark:bg-slate-800 p-3 rounded-xl flex gap-3 items-start">
+
+            <div class="bg-white p-3 rounded-xl flex gap-3 items-start">
                 <div
-                    class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 dark:from-slate-700 dark:to-slate-800 flex-shrink-0 flex items-center justify-center font-bold text-slate-500">
-                    DV</div>
+                    class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 flex-shrink-0 flex items-center justify-center font-bold text-slate-500">
+                    DV
+                </div>
                 <div>
                     <h5 class="font-bold text-base mb-1">Devocionais Diários</h5>
-                    <p class="text-sm text-slate-500 dark:text-slate-400">Autor: Maria Silva — Empréstimo: 2
-                        semanas</p>
+                    <p class="text-sm text-slate-600">Autor: Maria Silva — Empréstimo: 2 semanas</p>
                 </div>
             </div>
-            <div class="bg-white dark:bg-slate-800 p-3 rounded-xl flex gap-3 items-start">
+
+            <div class="bg-white p-3 rounded-xl flex gap-3 items-start">
                 <div
-                    class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 dark:from-slate-700 dark:to-slate-800 flex-shrink-0 flex items-center justify-center font-bold text-slate-500">
-                    CM</div>
+                    class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 flex-shrink-0 flex items-center justify-center font-bold text-slate-500">
+                    CM
+                </div>
                 <div>
                     <h5 class="font-bold text-base mb-1">Comentários Bíblicos</h5>
-                    <p class="text-sm text-slate-500 dark:text-slate-400">Autor: João Pereira — Disponível</p>
+                    <p class="text-sm text-slate-600">Autor: João Pereira — Disponível</p>
                 </div>
             </div>
         </div>
