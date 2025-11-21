@@ -73,44 +73,93 @@
         </div>
     </section>
 
-    <section id="catalogo" class="my-7">
+    <section id="destaques" class="my-7">
         <h3 class="text-2xl font-bold">Destaques do acervo</h3>
         <p class="text-slate-600 mt-1">Alguns títulos selecionados para edificação e estudo.</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-            <div class="bg-white p-3 rounded-xl flex gap-3 items-start">
-                <div
-                    class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 flex-shrink-0 flex items-center justify-center font-bold text-slate-500">
-                    Bí
-                </div>
-                <div>
-                    <h5 class="font-bold text-base mb-1">Bíblia de Estudo</h5>
-                    <p class="text-sm text-slate-600">Tradução atualizada — Disponível</p>
-                </div>
-            </div>
+        <div 
+            x-data="{ current: 0, cards: 5 }"
+            class="relative mt-6">
 
-            <div class="bg-white p-3 rounded-xl flex gap-3 items-start">
-                <div
-                    class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 flex-shrink-0 flex items-center justify-center font-bold text-slate-500">
-                    DV
-                </div>
-                <div>
-                    <h5 class="font-bold text-base mb-1">Devocionais Diários</h5>
-                    <p class="text-sm text-slate-600">Autor: Maria Silva — Empréstimo: 2 semanas</p>
-                </div>
-            </div>
+            <!-- LEFT ARROW -->
+            <button 
+                @click="if (current > 0) current--"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-300 shadow px-3 py-2 rounded-full z-10">
+                ‹
+            </button>
 
-            <div class="bg-white p-3 rounded-xl flex gap-3 items-start">
-                <div
-                    class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 flex-shrink-0 flex items-center justify-center font-bold text-slate-500">
-                    CM
-                </div>
-                <div>
-                    <h5 class="font-bold text-base mb-1">Comentários Bíblicos</h5>
-                    <p class="text-sm text-slate-600">Autor: João Pereira — Disponível</p>
+            <!-- RIGHT ARROW -->
+            <button 
+                @click="if (current < cards - 1) current++"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-300 shadow px-3 py-2 rounded-full z-10">
+                ›
+            </button>
+
+            <!-- CARDS WRAPPER -->
+            <div class="overflow-hidden">
+                <div 
+                    class="flex transition-transform duration-300"
+                    :style="`transform: translateX(-${current * 260}px)`">
+
+                    <!-- CARD 1 -->
+                    <div class="bg-white p-3 rounded-xl flex gap-3 items-start min-w-[250px] mr-4">
+                        <div class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 flex items-center justify-center font-bold text-slate-500">
+                            Bí
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-base mb-1">Bíblia de Estudo</h5>
+                            <p class="text-sm text-slate-600">Tradução atualizada — Disponível</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="bg-white p-3 rounded-xl flex gap-3 items-start min-w-[250px] mr-4">
+                        <div class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 flex items-center justify-center font-bold text-slate-500">
+                            DV
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-base mb-1">Devocionais Diários</h5>
+                            <p class="text-sm text-slate-600">Autor: Maria Silva — Empréstimo: 2 semanas</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="bg-white p-3 rounded-xl flex gap-3 items-start min-w-[250px] mr-4">
+                        <div class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 flex items-center justify-center font-bold text-slate-500">
+                            CM
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-base mb-1">Comentários Bíblicos</h5>
+                            <p class="text-sm text-slate-600">Autor: João Pereira — Disponível</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="bg-white p-3 rounded-xl flex gap-3 items-start min-w-[250px] mr-4">
+                        <div class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 flex items-center justify-center font-bold text-slate-500">
+                            ET
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-base mb-1">Estudos Teológicos</h5>
+                            <p class="text-sm text-slate-600">Coleção avançada — Empréstimo: 1 semana</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="bg-white p-3 rounded-xl flex gap-3 items-start min-w-[250px] mr-4">
+                        <div class="cover w-[78px] h-[110px] rounded-md bg-gradient-to-br from-blue-50 to-emerald-50 flex items-center justify-center font-bold text-slate-500">
+                            HM
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-base mb-1">Hinos e Música</h5>
+                            <p class="text-sm text-slate-600">Louvor e adoração — Disponível</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
+
 
 </x-home-layout>
